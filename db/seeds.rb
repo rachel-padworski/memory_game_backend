@@ -10,3 +10,5 @@ rachel = Player.create(username: "Rachel")
 kevin = Player.create(username: "kpad")
 nolando = Player.create(username: "Nolando")
 lilliana = Player.create(username: "Lilliana")
+
+Game.create(title: "Memory Game", image_url: "https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", player_id: 1)
