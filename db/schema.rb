@@ -20,15 +20,15 @@ ActiveRecord::Schema.define(version: 2020_10_08_200516) do
     t.string "image_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "player_id"
+    t.index ["player_id"], name: "index_games_on_player_id"
   end
 
   create_table "players", force: :cascade do |t|
     t.string "username"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "game_id"
-    t.index ["game_id"], name: "index_players_on_game_id"
   end
 
-  add_foreign_key "players", "games"
+  add_foreign_key "games", "players"
 end
