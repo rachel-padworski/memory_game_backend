@@ -3,19 +3,81 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+#   movies = Movie.create([{ title: 'Star Wars' }, { title: 'Lord of the Rings' }])
+#   Character.create(title: 'Luke', movie: movies.first)
 
 # Player.destroy_all
 # Game.destroy_all
 
+game = Game.create([{title: "Memory Game"}])
+players = Player.create([{username: "rachel", game_id: game.first}, {username: "kpad", game_id: game.first}])
+cards = Card.create([
+         {
+            title: 'felix',
+            image_url: 'memory_game_frontend/images/Felix100x100.png',
+            game_id: game.first
+         },
+         {
+            title: 'gene',
+            image_url: 'memory_game_frontend/images/Gene100x100.png',
+            game_id: game.first
+         },
+         {
+            title: 'king-candy',
+            image_url: 'memory_game_frontend/images/KingCandy100x100.png',
+            game_id: game.first
+         },
+         {
+            title: 'qbert',
+            image_url: 'memory_game_frontend/images/Qbert100x100.png',
+            game_id: game.first
+         },
+         {
+             title: 'ralph',
+             image_url: 'memory_game_frontend/images/Ralph100x100.png',
+             game_id: game.first
+         },
+         {
+             title: 'rancis-fluggerbutter',
+             image_url: 'memory_game_frontend/images/RancisFluggerbutter100x100.png',
+             game_id: game.first
+         },
+         {
+             title: 'sargeant-calhoun',
+             image_url: 'memory_game_frontend/images/SargeantCalhoun100x100.png',
+             game_id: game.first
+         },
+         {
+             title: 'sour-bill',
+             image_url: 'memory_game_frontend/images/SourBill100x100.png',
+             game_id: game.first
+         },
+         {
+             title: 'taffyta-muttonfudge',
+             image_url: 'memory_game_frontend/images/TaffytaMuttonfudge100x100.png',
+             game_id: game.first
+         },
+         {
+             title: 'vanellope-on-ralph',
+             image_url: 'memory_game_frontend/images/VanellopeOnRalph100x100.png',
+             game_id: game.first
+         },
+         {
+             title: 'vanellope-von-schweetz',
+             image_url: 'memory_game_frontend/images/VanellopeVonSchweetz100x100.png',
+             game_id: game.first
+         },
+         {
+             title: 'wynchal-and-duncan',
+             image_url: 'memory_game_frontend/images/WynchalAndDuncan100x100.png',
+             game_id: game.first
+         },
+     ])
+# Game.create(title: "Memory Game", image_url: "https:memory_game_frontend/images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", player: players.first)
 
-players = Player.create([{username: "rachel"}, {username: "kpad"}])
-Game.create(title: "Memory Game", image_url: "https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500", player: players.first)
+# rachel = Player.create(usertitle: "Rachel")
+# kevin = Player.create(usertitle: "kpad")
+# nolando = Player.create(usertitle: "Nolando")
+# lilliana = Player.create(usertitle: "Lilliana")
 
-# rachel = Player.create(username: "Rachel")
-# kevin = Player.create(username: "kpad")
-# nolando = Player.create(username: "Nolando")
-# lilliana = Player.create(username: "Lilliana")
-
-# Game.create(title: "Memory Game", image_url: "https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
+# Game.create(title: "Memory Game", image_url: "https:memory_game_frontend/images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500")
