@@ -1,0 +1,7 @@
+2020-10-21 14:24:24.807 MDT [15952] LOG:  starting PostgreSQL 13.0 on x86_64-apple-darwin19.4.0, compiled by Apple clang version 11.0.0 (clang-1100.0.33.8), 64-bit
+2020-10-21 14:24:24.810 MDT [15952] LOG:  listening on IPv6 address "::1", port 5432
+2020-10-21 14:24:24.810 MDT [15952] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2020-10-21 14:24:24.813 MDT [15952] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2020-10-21 14:24:24.819 MDT [15953] LOG:  database system was shut down at 2020-10-21 14:24:11 MDT
+2020-10-21 14:24:24.824 MDT [15952] LOG:  database system is ready to accept connections
+2020-10-21 14:24:50.357 MDT [15976] FATAL:  database "memory_game_backend_development" does not exist
