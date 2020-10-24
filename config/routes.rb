@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       resources :games, only: [:index]
       resources :players, only: [:index, :create]
       resources :cards, only: [:index, :create]
+      post '/login', to: 'auth#create'
     end
   end
 

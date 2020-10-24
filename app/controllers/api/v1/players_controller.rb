@@ -1,31 +1,32 @@
 class Api::V1::PlayersController < ApplicationController
-   
+    # skip the before action if you need to create a player
+    skip_before_action :authorized, only: [:create]
+
     def index
         players = Player.all 
         render json: PlayerSerializer.new(players)
-        # render json: players, status: 200
     end
 
-    # def show
-    #     @player = Player.find(username[:id])
-    #     render json: @user
-    # end
+    def show
+        @player = Player.find(player_params[:id])
+        render json: @player
+    end
 
     def create
-        player = Player.find_or_create_by(player_params)
+        @player = Player.create(player_params)
  
-        if player.save
-            render json: PlayerSerializer.new(player), status: :accepted
-            # render json: player, status: 200
+        if @player.valid?
+            @token = encode_token(player_id: @player.id)
+            render json: { player: PlayerSerializer.new(@player), jwt: @token }, status: :created
         else
-            render json: {errors: Player.errors.full_messages}, status: :unprocessible_entity
+            render json: { error: 'failed to create user' }, status: :not_acceptable
         end
     end
 
     private
 
     def player_params
-        params.require(:player).permit(:username, :game_id)
+        params.require(:player).permit(:username, :game_id, :password)
     end
 
 end

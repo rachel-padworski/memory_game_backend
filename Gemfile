@@ -43,3 +43,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'seed-fu', '~> 2.3'
+gem "jwt", "~> 2.2"
+
+gem "bcrypt", "~> 3.1"
