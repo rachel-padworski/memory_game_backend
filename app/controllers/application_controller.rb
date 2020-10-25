@@ -10,7 +10,7 @@ class ApplicationController < ActionController::API
     # decodes the token to authorize the player on the frontend
 
     def auth_header
-        request.headers('Authorization')
+        request.headers['Authorization']
     end
 
     def decode_token

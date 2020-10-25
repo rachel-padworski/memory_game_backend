@@ -10,7 +10,7 @@
 # Game.destroy_all
 
 game = Game.create([{title: "Memory Game"}])
-players = Player.create([{username: "rachel", game_id: 1}, {username: "kpad", game_id: 1}])
+players = Player.create([{username: "sunset1", password: "passw0rd"}, {username: "sunrise1", password: "passw0rd"}])
 cards = Card.create([
          {
             title: 'felix',
