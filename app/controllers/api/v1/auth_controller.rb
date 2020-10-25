@@ -4,7 +4,8 @@ class Api::V1::AuthController < ApplicationController
 
     def profile
         render json: { player: PlayerSerializer.new(current_player) }, status: :accepted
-
+    end
+    
     def create
         @player = Player.find_by(username: player_login_params[:username])
         # .authenticate comes from brcypt has_secure_password macro. 
