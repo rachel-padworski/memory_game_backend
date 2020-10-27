@@ -11,7 +11,7 @@
 A game for all ages featuring characters from Wreck-It Ralph. “What’s going on in this candy-coated heart of darkness?” Memory Game is just a simple matching game with 24 cards. This backend features an API comprised of and array of cards and an array of players. Each card represents a character - Ralph, Felix, Vanellope, etc. Enjoy!
 
 # Installation
-To use this app, clone the [repo](https://github.com/raepad/memory_game_backend) and use it alongside this [repo](https://github.com/raepad/memory_game_frontend), then execute:
+To use this app, clone this backend [repo](https://github.com/raepad/memory_game_backend) and use it alongside this frontend [repo](https://github.com/raepad/memory_game_frontend), then execute:
 `$ bundle install`
 
 # Usage
