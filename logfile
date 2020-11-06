@@ -31,3 +31,7 @@
 2020-10-24 08:39:49.102 MDT [32422] STATEMENT:  SELECT "players".* FROM "players" WHERE "players"."username" = $1 AND "players"."game_id" = $2 AND "players"."password" = $3 LIMIT $4
 2020-10-24 08:39:50.952 MDT [32422] ERROR:  column players.password does not exist at character 100
 2020-10-24 08:39:50.952 MDT [32422] STATEMENT:  SELECT "players".* FROM "players" WHERE "players"."username" = $1 AND "players"."game_id" = $2 AND "players"."password" = $3 LIMIT $4
+2020-11-05 07:59:40.197 MST [25443] ERROR:  column players.password does not exist at character 100
+2020-11-05 07:59:40.197 MST [25443] STATEMENT:  SELECT "players".* FROM "players" WHERE "players"."username" = $1 AND "players"."game_id" = $2 AND "players"."password" = $3 LIMIT $4
+2020-11-05 08:00:40.020 MST [25443] ERROR:  column players.password does not exist at character 100
+2020-11-05 08:00:40.020 MST [25443] STATEMENT:  SELECT "players".* FROM "players" WHERE "players"."username" = $1 AND "players"."game_id" = $2 AND "players"."password" = $3 LIMIT $4

@@ -16,8 +16,8 @@ class Api::V1::PlayersController < ApplicationController
         @player = Player.create(player_params)
  
         if @player.valid?
-            @token = encode_token(player_id: @player.id)
-            render json: { player: PlayerSerializer.new(@player), jwt: @token }, status: :created
+            # @token = encode_token(player_id: @player.id)
+            render json: { player: PlayerSerializer.new(@player) }, status: :created
         else
             render json: { error: 'failed to create user' }, status: :not_acceptable
         end
